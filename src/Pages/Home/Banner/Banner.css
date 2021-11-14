@@ -1,0 +1,27 @@
+.bannar{
+background-image: url(../../../images/banner1.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+background-position:center;
+background-blend-mode: multiply;
+background-color: rgb(122, 115, 113);
+
+}
+.headding{
+    text-align: center;
+    color:rgb(255, 255, 255);
+    font-family: none;
+    font-weight: bold;
+}
+.bannarText{
+    color: rgb(231, 231, 222);
+}
+.bannarBtn{
+   background-color: rgba(255, 255, 0, 0);
+   color: wheat;
+   font-size: 20px;
+    border: 2px solid yellow;
+}
+.bannarBtn:hover{
+    background-color: #F63E7B;
+}
