@@ -8,7 +8,7 @@ const ManageService = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        fetch('http://localhost:5000/manage')
+        fetch('https://obscure-taiga-80658.herokuapp.com/manage')
             .then(res => res.json())
             .then(data => {
                 setManageOrder(data)
@@ -19,7 +19,7 @@ const ManageService = () => {
 
     //Update Status
     const handleUpdate = id => {
-        const url = `http://localhost:5000/status/${id}`
+        const url = `https://obscure-taiga-80658.herokuapp.com/status/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -44,7 +44,7 @@ const ManageService = () => {
     const handleManageDelete = id => {
         const process = window.confirm('Are you want to DELETE?')
         if (process) {
-            const url = `http://localhost:5000/manage/${id}`
+            const url = `https://obscure-taiga-80658.herokuapp.com/manage/${id}`
             fetch(url, {
                 method: 'DELETE',
             })

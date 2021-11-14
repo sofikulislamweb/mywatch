@@ -7,7 +7,7 @@ const Explore = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://obscure-taiga-80658.herokuapp.com/services')
             .then(res => res.json())
             .then(data => {
                 setServices(data)
@@ -21,7 +21,7 @@ const Explore = () => {
 
     return (
         <div>
-            <h2 className="p-5 text-center">Choise Your Bag from Here</h2>
+            <h2 className="p-5 text-center text-warning">Choose Your Best Products</h2>
             <div className="row container-fluid m-auto mb-5">
                 {
                     services.map(service => <Service

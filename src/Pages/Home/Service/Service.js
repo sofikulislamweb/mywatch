@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Service.css'
 
@@ -15,7 +16,7 @@ const Service = (props) => {
 
                     {/* =========Dinamic Route setup=========== */}
 
-                    <Link to={`/purchase/${_id}`} ><button className="btn-sm live login"><i className="fas fa-cart-plus"></i> Buy Now</button></Link>
+                    <Link to={`/purchase/${_id}`} ><Button className="btn-sm  live login" variant="warning"><i className="fas fa-cart-plus"></i> Buy Now</Button></Link>
                 </div>
             </div>
         </div>

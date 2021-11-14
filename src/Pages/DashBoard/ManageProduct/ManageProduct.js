@@ -6,7 +6,7 @@ const ManageProduct = () => {
     const [loading, setLoading] = useState(true)
 
     useState(() => {
-        fetch(`http://localhost:5000/services`)
+        fetch(`https://obscure-taiga-80658.herokuapp.com/services`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data)
@@ -17,7 +17,7 @@ const ManageProduct = () => {
     const hanldeproductDelete = id => {
         const process = window.confirm('Are you want to cancel Your product?')
         if (process) {
-            const url = `http://localhost:5000/services/${id}`
+            const url = `https://obscure-taiga-80658.herokuapp.com/services/${id}`
             fetch(url, {
                 method: 'DELETE',
             })

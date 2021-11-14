@@ -8,7 +8,7 @@ const MyOrder = () => {
     const [loading, setLoading] = useState(true)
 
     useState(() => {
-        fetch(`http://localhost:5000/myOrder/${user?.email}`)
+        fetch(`https://obscure-taiga-80658.herokuapp.com/myOrder/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setMyOrder(data)
@@ -19,7 +19,7 @@ const MyOrder = () => {
     const hanldeOrderDelete = id => {
         const process = window.confirm('Are you want to cancel Your Order?')
         if (process) {
-            const url = `http://localhost:5000/myOrder/${id}`
+            const url = `https://obscure-taiga-80658.herokuapp.com/myOrder/${id}`
             fetch(url, {
                 method: 'DELETE',
             })
